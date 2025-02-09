@@ -1,6 +1,6 @@
-Expenses,January,Febraury,March,April,May,June,July,August,September,October,November,December,average,Expenses
-Raw_mateial,2000,3000,3000,2000,4000,5000,2000,3400,2300,4500,2400,5000,3216.6666666666665,Raw_mateial
-Rent,900,900,900,900,900,900,900,900,900,900,900,900,900.0,Rent
-Water bill,250,250,250,250,250,250,220,220,220,220,220,220,235.0,Water bill
-Internet bill,29,29,29,29,29,29,29,29,29,29,29,29,29.0,Internet bill
-Light bill,150,140,160,180,189,156,178,134,145,177,145,182,161.33333333333334,Light bill
+Expenses,January,Febraury,March,April,May,June,July,August,September,October,November,December,average,Expenses_limit
+Raw_mateial,2000,3000,3000,2000,4000,5000,2000,3400,2300,4500,2400,5000,3216.6666666666665,Over Spent
+Rent,900,900,900,900,900,900,900,900,900,900,900,900,900.0,Within Limit
+Water bill,250,250,250,250,250,250,220,220,220,220,220,220,235.0,Within Limit
+Internet bill,29,29,29,29,29,29,29,29,29,29,29,29,29.0,Within Limit
+Light bill,150,140,160,180,189,156,178,134,145,177,145,182,161.33333333333334,Within Limit
