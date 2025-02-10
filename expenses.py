@@ -45,7 +45,7 @@ def read_Expenses_data(filename):
                        'December': int(row[12])
                    })
                except ValueError as e:
-                   # Handle case where the score
+                   # Handle case where the Expenses
                    # 'scoreis not an integer
                    print(f"Invalid data in row {row}: {e}")
                    print("Only integer scores are allowed. Goodbye!")
@@ -67,39 +67,39 @@ def read_Expenses_data(filename):
  
 def calculate_average(Expenses):
    """
-   Calculates the average score
-   'scorefor a Expenses.
+   Calculates the average Expenses
+   'Expensesfor a Expenses.
   
    Args:
    Expenses (dict): The dictionary containing Expenses data (Expenses and months).
  
    Returns:
-   float: The average score
-   'scorefor the Expenses, or None if data is missing.
+   float: The average Expenses
+   'Expensesfor the Expenses, or None if data is missing.
    """
    try:
-       # Calculate the total score
-       # 'scoreby summing up individual subject scores
+       # Calculate the total Expenses
+       # 'expensesby summing up individual Expenses 
        total = Expenses['January'] +Expenses['Febraury'] + Expenses['March'] + Expenses['April'] + Expenses['May'] + Expenses['June'] + Expenses['July'] + Expenses['August'] + Expenses['September'] + Expenses['October'] + Expenses['November'] + Expenses['December']
-       # Calculate the average by dividing total by the number of subjects (3)
+       # Calculate the average by dividing total by the number of Expenses (3)
        average = total / (len(Expenses)-1)
        return average
    except KeyError as e:
-       # Handle case if some data (e.g., scores) is missing for the Expenses
+       # Handle case if some data (e.g., expenses) is missing for the Expenses
        print(f"Missing data for {e}")
        return None
  
 def assign(Expenses):
    """
-   Assigns overspend and within limit to income based on a Expenses's score
+   Assigns overspend and within limit to income based on a Expenses's
   
    Args:
-   score
-   'score(float): The score
+   Expenses
+   'Expenses(float): The Expenses
    'scoreof the Expenses.
  
    """
-   # Determine the grade based on score
+   # Determine the grade based on Expenses
    if Expenses >= 2000:
        return "Over Spent"
    else:
@@ -107,14 +107,14 @@ def assign(Expenses):
  
 def calculate_min_max_range(Montly_expenses):
    """
-   Calculates the minimum, maximum, and range for a given list of Expenses scores.
+   Calculates the minimum, maximum, and range for a given list of Expenses .
   
    Args:
    Montly_expenses (list): A list of Expenses all months.
  
    Returns:
-   tuple: A tuple containing the minimum score
-    maximum score and range (max - min).
+   tuple: A tuple containing the minimum Expenses
+    maximum Expenses and range (max - min).
    """
    min_score = min(Montly_expenses)
    max_score = max(Montly_expenses)
@@ -122,7 +122,7 @@ def calculate_min_max_range(Montly_expenses):
  
 def process_Expenses_results(Expensess_data):
    """
-   Processes Expenses data, calculates averages, grades, and additional statistics, and returns the results.
+   Processes Expenses data, calculates averages, and additional statistics, and returns the results.
  
    Args:
    Expensess_data (list): A list of dictionaries containing Expenses data.
@@ -139,13 +139,13 @@ def process_Expenses_results(Expensess_data):
       
       
       
-       # Calculate the average score
-       # 'scorefor the Expenses
+       # Calculate the average Expenses
+       # 'Expensesfor the Expenses
        average = calculate_average(Expenses)
        if average is not None:
         Expense_limit = assign(average)
           
-           # Calculate the minimum, maximum, and range of scores
+           # Calculate the minimum, maximum, and range of Expenses
         min_score, max_score = calculate_min_max_range(Montly_expenses)
           
           
@@ -199,7 +199,7 @@ if __name__ == "__main__":
    Expensess_data = read_Expenses_data(filename)
  
    if Expensess_data:
-       # Process the Expenses data to calculate averages and grades
+       # Process the Expenses data to calculate averages and Expenses_limit
        results = process_Expenses_results(Expensess_data)
        # Write the processed results to a new CSV file
        write_results_to_csv(results, 'Expenses_results.csv')
